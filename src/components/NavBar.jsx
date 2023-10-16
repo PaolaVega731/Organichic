@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { CarritoDeCompras } from './Cart';
+import { CarritoDeCompras } from './CartWidget';
 
 export const NavBar = ( ) => {
     return(
