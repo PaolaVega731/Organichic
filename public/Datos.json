@@ -1,0 +1,16 @@
+[ 
+    { "id": 1 ,"name":"Camiseta Gina cruzada azul constelaciones.","description":"Gina es una camiseta cruzada con manga larga de punto de algodón orgánico. Muy femenina y favorecedora con una lazada en el interior para que puedas ajustarla a tu talla según prefieras.", "category":"Women","price":1000,"image":"https://tiralahilacha.com/cdn/shop/products/GW03-01_1.jpg?v=1697290513&width=1946"},
+    { "id": 2 ,"name":"Pantalón Straight Finna Beige Natural","description":"Finna es un pantalón largo de sarga de algodón. Tiene corte recto y talle alto con bolsillos en los laterales y en la parte trasera. Estos jeans sostenibles son una prenda totalmente versátil.","category":"Women","price":2000,"image":"https://tiralahilacha.com/cdn/shop/files/7494.jpg?v=1695161036&width=1946"},
+    { "id": 3 ,"name":"Camisa","description":"Camisa Fiorella Azul Aguamarina de Lino y Algodón Orgánico","category":"women","price":1500,"image":"https://tiralahilacha.com/cdn/shop/files/7473.jpg?v=1695160988&width=1946"},
+    { "id": 4 ,"name":"Vestido","description":"Vestido Giorgia manga ranglán rojo martecrepúsculo","category":"Women","price":2500,"image": "https://tiralahilacha.com/cdn/shop/products/GW02-03_1.jpg?v=1697290496&width=1946"},
+    { "id": 5 ,"name":"Mono","description":"Mono Fancy Rojo Rooibos","category":"Women","price":2500,"image":"https://tiralahilacha.com/cdn/shop/files/7334.jpg?v=1695161421&width=1946"},
+    { "id": 6 ,"name":"Body","description":"Body kimono manga larga Griselle beige lluvia sideral", "category":"Kids","price":800,"image":"https://tiralahilacha.com/cdn/shop/products/GK03-02_1.jpg?v=1697290843&width=1946"},
+    { "id": 7 ,"name":"Pantalón","description":"Pantalón largo Galina terry rojo marte","category":"Kids","price":1500,"image":"https://tiralahilacha.com/cdn/shop/products/GK08-06_1.jpg?v=1697290951&width=1946"},
+    { "id": 8 ,"name":"Vestido","description":"Vestido Galilea azul constelaciones","category":"Kids","price":1800,"image":"https://tiralahilacha.com/cdn/shop/products/GK06-01_1.jpg?v=1697290862&width=1946"},
+    { "id": 9 ,"name":"Camiseta","description":"Camiseta Fer Tetas Rojo","category":"Men","price":1500,"image": "https://tiralahilacha.com/cdn/shop/files/7520.jpg?v=1695160833&width=1946"},
+    { "id": 10 ,"name":"T-shirt","description":"Eduard T-shirt with green reflections","category":"Men","price":1600,"image":"https://tiralahilacha.com/cdn/shop/files/6579.jpg?v=1695157549&width=1946"}
+
+
+
+
+]

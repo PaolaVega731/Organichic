@@ -1,7 +1,0 @@
-[ 
-    { "id": 1 ,"name":"Camiseta","description":"Camiseta Gina cruzada azul constelaciones","price":1000,"image":"https://tiralahilacha.com/cdn/shop/products/GW03-01_1.jpg?v=1697290513&width=1946"},
-    { "id": 2 ,"name":"Pantalón","description":"Pantalón Straight Finna Beige Natural","price":2000,"image":"https://tiralahilacha.com/cdn/shop/files/7494.jpg?v=1695161036&width=1946"},
-    { "id": 3 ,"name":"Camisa","description":"Camisa Fiorella Azul Aguamarina de Lino y Algodón Orgánico","price":1500,"image":"https://tiralahilacha.com/cdn/shop/files/7473.jpg?v=1695160988&width=1946"},
-    { "id": 4 ,"name":"Vestido","description":"Vestido Giorgia manga ranglán rojo martecrepúsculo","price":2500,"image": "https://tiralahilacha.com/cdn/shop/products/GW02-03_1.jpg?v=1697290496&width=1946"},
-    { "id": 5 ,"name":"Mono","description":"Mono Fancy Rojo Rooibos","price":500,"image":"https://tiralahilacha.com/cdn/shop/files/7334.jpg?v=1695161421&width=1946"}
-]

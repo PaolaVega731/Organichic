@@ -1,18 +1,25 @@
-import { ItemDetailContainer } from './components/ItemDetailContainer';
-import { NavBar } from "./components/NavBar"
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { ItemDetailContainer } from "./components/ItemDetailContainer";
+import { NavBar } from "./components/NavBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Cart from "./components/Cart";
+import ItemListContainer from "./components/ItemListContainer";
 
-function App() { 
+function App() {
   return (
-    <>     
-      <div className="">
-        <NavBar/>
-        <ItemDetailContainer />
-        <span className="absolute top-4 right-5 bg-red-500 px-1 rounded-full text-sm text-white">
-               1
-            </span>
-      </div>          
-    </>
-  )
+    <BrowserRouter>
+      
+        <NavBar />
+      
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer />} />
+        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/category/:id" element={<ItemListContainer />} />
+        <Route exact path="/product/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
-export default App
+export default App;
