@@ -4,4 +4,4 @@ _italica_
 Es un proyecto para la comisión de react de Coderhouse donde se muestra una e-commerce utilizando las librerias Bootstrap y Tailwindcss, y Firebase como base de datos. 
 
 
-![OrganiChic](https://github.com/PaolaVega731/Organichic/assets/130715894/629658b4-a794-43e2-9dd5-ceb35b7c599f)
+![OrganiChic](https://github.com/PaolaVega731/Organichic/assets/130715894/538c7381-f5c8-44b1-a5b5-5a6815901b12)
