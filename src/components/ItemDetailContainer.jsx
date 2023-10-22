@@ -16,7 +16,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <>
-      <center p="0.5 rem">
+      <center p="0.5 rem" >
         <ItemDetail product={product} />
       </center>
     </>

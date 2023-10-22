@@ -10,8 +10,7 @@ const ItemDetail = ({ product }) => {
     <>
       {filteredProduct.map((p) => {
         return (
-          <>
-           
+          <>    
             <Card style={{ width: "18rem" }} key={p.id} className="">
               <img src={p.image} alt="" />
               <Card.Body>

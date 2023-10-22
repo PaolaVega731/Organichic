@@ -9,27 +9,27 @@ export const ItemListContainer = () => {
     const data = await response.json();
     return data;
   };
-
   const [product, setProduct] = useState([]);
+  const {category} = useParams();
 
   useEffect(() => {
-    getProducts().then((p) => setProduct(p));
-  }, []);
-
-
-  const ItemListContainer = ({ product }) => {
-    const { category } = useParams();
-    const filteredProduct = product.filter((product) => product.category == category);
-  
+    getProducts().then((data) => {
+      if(category !==undefined){
+        const filteredProducts = data.filter((product)=> product.category === category);
+        setProduct(filteredProducts);
+      }else {
+        setProduct(data);
+      }
+    });  
+  },[category]); 
+     
     return (
-
- 
     <>
       <center>
         <ItemList product={product} />
       </center>
     </>
   );
-}};
+};
 
 export default ItemListContainer;
