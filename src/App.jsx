@@ -6,6 +6,9 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Sostenibilidad from "./components/Sostenibilidad";
 import ItemListContainer from "./components/ItemListContainer";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function App() {
   return (
