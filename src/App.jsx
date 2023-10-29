@@ -6,13 +6,17 @@ import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Sostenibilidad from "./components/Sostenibilidad";
 import ItemListContainer from "./components/ItemListContainer";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import ShoppingCartProvider, { CartContext } from "./context/ShoppingCartContext";
+
+
 
 function App() {
   return (
-    <BrowserRouter>     
+    
+    <BrowserRouter> 
+     <ShoppingCartProvider>
+      <CartContext/>
+      </ShoppingCartProvider>    
         <NavBar />      
       <Routes>
         <Route exact path="/" element={<ItemListContainer />} />

@@ -1,10 +1,15 @@
 import React from "react";
 import Item from "./Item.jsx";
+import Loader from "./Loader.jsx";
 
 const ItemList = ({ product }) => {
   return (
-    <div>
-      {product.map((p) => {
+   <>
+      {
+     // product.length <= 0 ? <Loader/> :
+     // <div className="card-grid"> 
+      
+      product.map((p) => {
         return (
           <>
             <Item
@@ -19,7 +24,8 @@ const ItemList = ({ product }) => {
           </>
         );
       })}
-    </div>
+   //</>// </div>
+   // </>
   );
 };
-export default ItemList;
+export default React.memo(ItemList);

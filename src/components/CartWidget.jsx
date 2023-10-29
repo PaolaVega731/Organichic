@@ -8,5 +8,6 @@ export const CarritoDeCompras = () => {
               0
             </span>
         </div>
+        
     );
 };
