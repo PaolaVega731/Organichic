@@ -8,22 +8,21 @@ import { CartContext } from "../context/CartContext";
 const ItemDetail = () => {
   const { id } = useParams()
   const [product, setProduct]= useState([])
-
-  useEffect(()=> {
-    const db = getFirestore()
-    const oneItem = doc(db, "ropa" `${id}`)
-
+  const {addItem} = useContext(CartContext)
+  useEffect(() => {
+    const db = getFirestore();
+    const oneItem = doc(db, "Ropa", id);
+  
     getDoc(oneItem).then((snapshot) => {
-      if (snapshot.exist()){
-        const docs = snapshot.data()
-        setProduct(docs)
-
+      if (snapshot.exists()) {
+        const docs = snapshot.data();
+        setProduct({ id: snapshot.id, ...docs });
       }
-    })
-  },[])
+    });
+  }, [id]);
   
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const increment = () => {
     setCount(count + 1);
   };
@@ -32,6 +31,7 @@ const ItemDetail = () => {
       setCount(count - 1);
     } 
   };
+  const p = product
     return (
       <Card style={{ width: "18rem" }} key={p.id} className="">
          <img src={p.image} alt="" />
@@ -42,7 +42,7 @@ const ItemDetail = () => {
          <div className="ItemDetail">
            <Button variant="primary" onClick={increment}>+</Button>
             <Button variant="primary" onClick={decrement}>-</Button>
-            <p>Valor actual: {count}</p>
+            <p> Cantidad: {count}</p>
             <Button variant="primary" onClick={() => addItem(p, count)}>
              Agregar al carrito
             </Button>

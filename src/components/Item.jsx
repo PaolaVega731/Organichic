@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Item = ({ title, description, price, image, id }) => {
+const Item = ({ title, image, id }) => {
   return (
     <Card style={{ width: "18rem"}}>
       <img src={image} alt="" />
