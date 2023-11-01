@@ -1,43 +1,55 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 import { Button, Card } from "react-bootstrap";
-import { useState } from "react";
+import { CartContext } from "../context/CartContext";
+ 
 
-const ItemDetail = ({ product }) => {
-  const { id } = useParams();
-  const filteredProduct = product.filter((product) => product.id == id);
+const ItemDetail = () => {
+  const { id } = useParams()
+  const [product, setProduct]= useState([])
 
-  const[ count, setCount]= useState(0);
-  const increment = ()=> {
+  useEffect(()=> {
+    const db = getFirestore()
+    const oneItem = doc(db, "ropa" `${id}`)
+
+    getDoc(oneItem).then((snapshot) => {
+      if (snapshot.exist()){
+        const docs = snapshot.data()
+        setProduct(docs)
+
+      }
+    })
+  },[])
+  
+
+  const [count, setCount] = useState(0);
+  const increment = () => {
     setCount(count + 1);
   };
   const decrement = () => {
-    setCount(count -1);
-  }
-
-  return (
-    <>
-      {filteredProduct.map((p) => {
-        return (
-            
-            <Card style={{ width: "18rem" }} key={p.id} className="">
-              <img src={p.image} alt="" />
-              <Card.Body>
-                <Card.Title>{p.name}</Card.Title>
-                <p>{p.description}</p>
-                <p> $ {p.price}</p>
-                <div className="ItemDetail">
-                <h3>Contador</h3>
-                <Button variant="primary" onClick={increment}>+</Button>
-                <Button variant="primary" onClick={decrement}>-</Button>
-                <p>Valor actual: {count}</p>
-                </div>             
-              </Card.Body>
-            </Card>
-      
+    if (count > 1 ) {
+      setCount(count - 1);
+    } 
+  };
+    return (
+      <Card style={{ width: "18rem" }} key={p.id} className="">
+         <img src={p.image} alt="" />
+         <Card.Body>
+         <Card.Title>{p.name}</Card.Title>
+         <p>{p.description}</p>
+         <p> $ {p.price}</p>
+         <div className="ItemDetail">
+           <Button variant="primary" onClick={increment}>+</Button>
+            <Button variant="primary" onClick={decrement}>-</Button>
+            <p>Valor actual: {count}</p>
+            <Button variant="primary" onClick={() => addItem(p, count)}>
+             Agregar al carrito
+            </Button>
+             </div>
+          </Card.Body>
+          </Card>
         );
-      })}
-    </>
-  );
-};
+      }
+    
 export default ItemDetail;

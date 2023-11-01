@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Item from "./Item.jsx";
 import Loader from "./Loader.jsx";
 
 const ItemList = ({ product }) => {
+  const [loading, setLoading] = useState(true); 
+
+  useEffect(() => {
+    // Simula una carga de datos, podrías llamar a una API aquí
+    setTimeout(() => {
+      setLoading(false); 
+    }, 2000); 
+  }, []);
+
   return (
-   <>
-      {
-     // product.length <= 0 ? <Loader/> :
-     // <div className="card-grid"> 
-      
-      product.map((p) => {
-        return (
-          <>
+    <>
+      {loading ? ( // Muestra el loader si el estado de carga es verdadero
+        <Loader />
+      ) : (
+        product.map((p) => {
+          return (
             <Item
-              Key={p.id}
+              key={p.id} 
               id={p.id}
               category={p.category}
               title={p.name}
@@ -21,11 +28,11 @@ const ItemList = ({ product }) => {
               price={p.price}
               image={p.image}
             />
-          </>
-        );
-      })}
-   //</>// </div>
-   // </>
+          );
+        })
+      )}
+    </>
   );
 };
-export default React.memo(ItemList);
+
+export default ItemList;

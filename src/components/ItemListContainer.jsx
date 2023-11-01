@@ -1,31 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import { useParams } from "react-router-dom";
+import {collection, getDocs, getFirestore } from 'firebase/firestore';
+
 
 export const ItemListContainer = () => {
-    const getProducts = async () => {
-    const response = await fetch("/Datos.json");
-    const data = await response.json();
-    return data;
-  };
   const [product, setProduct] = useState([]);
-  const {category} = useParams();
 
   useEffect(() => {
-    getProducts().then((data) => {
-      if(category !==undefined){
-        const filteredProducts = data.filter((product)=> product.category === category);
-        setProduct(filteredProducts);
-      }else {
-        setProduct(data);
-      }
-    });  
-  },[category]); 
-     
+    const db = getFirestore()
+    const ItemsCollection = collection(db, "ropa")
+    getDocs(ItemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data())
+      setProduct(docs)
+
+    })
+      
+  }
+,[])
     return (
     <>
-      <center>
+      <center className="row" style={{ width:"18 rem", display:'flex'}}>
         <ItemList product={product} />
       </center>
     </>

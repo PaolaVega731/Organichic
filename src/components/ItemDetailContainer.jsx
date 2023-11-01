@@ -1,22 +1,22 @@
-import React from "react";
 import ItemDetail from "./ItemDetail";
 import { useState, useEffect } from "react";
+import {collection, getDocs, getFirestore} from 'firebase/firestore'
 
 export const ItemDetailContainer = () => {
-  const getProducts = async () => {
-    const response = await fetch("/Datos.json");
-    const data = await response.json();
-    return data;
-  };
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    getProducts().then((p) => setProduct(p));
+    const db = getFirestore();
+    const itemsCollection = collection(db, "Ropa");
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => doc.data());
+      setProduct(docs);
+    });
   }, []);
 
   return (
     <>
-      <center p="0.5 rem" >
+      <center>
         <ItemDetail product={product} />
       </center>
     </>
