@@ -4,8 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   const containerStyle = {
-    backgroundColor: '#FFE5B4' ,
     padding: '100px',
+    backgroundImage: 'url("https://scontent.cdninstagram.com/v/t51.2885-15/393113868_863752148798275_5502551303501225435_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=pyI4FjAibpcAX-fXwME&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCITP2HfGQAtSUk6mcx_ePaQ8YeSQK9Q2iASy10LK7HdQ&oe=6547DE93")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    
     
   };
 

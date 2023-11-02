@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Cart from "./components/Cart";
 import Sostenibilidad from "./components/Sostenibilidad";
+import Materiales from "./components/Materiales";
 import ItemListContainer from "./components/ItemListContainer";
 import CartProvider from "./context/CartContext";
 
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/sostenibilidad" element={<Sostenibilidad />} />
+        <Route exact path="/materiales" element={<Materiales />} />
         <Route
          exact
          path="/category/:category"

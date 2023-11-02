@@ -18,6 +18,7 @@ export const NavBar = () => {
             <Nav className="me-auto">
               <Nav.Link href="/home">Home</Nav.Link>
               <Nav.Link href="/sostenibilidad">Sostenibilidad</Nav.Link>
+              <Nav.Link href="/materiales">Materiales</Nav.Link>
               <NavDropdown title="Clothes" id="basic-nav-dropdown">
                 <Link to={`/category/${'women'}`}>
                 </Link>  
