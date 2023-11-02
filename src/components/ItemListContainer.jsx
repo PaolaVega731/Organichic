@@ -24,8 +24,8 @@ export const ItemListContainer = () => {
  
   return (
     <>
-      <center className="row" style={{ width: "18 rem", display: "flex" }}>
-        <ItemList product={product}  />
+      <center className="row" style={{ width: "18 rem", display: "flex",justifyContent: 'center' }}>
+        <ItemList product={product}/>
       </center>
     </>
   );

@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
       const updatedCart = [...cart];
       updatedCart[existingItemIndex].quantity += quantity;
       setCart(updatedCart);
-      console.log(cart)
+     
  
     } else {
       // El producto no está en el carrito, agrégalo
@@ -79,7 +79,7 @@ const CheckoutButton = () => {
       alert('Gracias por su compra. Número de orden: ' + orderRef.id);
     } catch (error) {
       console.error('Error al procesar la compra:', error);
-      // Maneja el error de forma adecuada (por ejemplo, mostrar un mensaje de error al usuario).
+      //  mostrar un mensaje de error al usuario.
     }
   };
 

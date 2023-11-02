@@ -9,11 +9,11 @@ const Cart = () => {
   );
 
   if (cart.length === 0) {
-    return <div>No hay productos en el carrito.</div>;
+    return <div>No hay productos en el carrito :(.</div>;
   }
 
   return (
-    <div>
+    <div className="text-center">
       <h2>Carrito</h2>
       {cart.map((item) => (
         <div key={item.id}>
