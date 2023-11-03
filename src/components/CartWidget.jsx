@@ -76,7 +76,7 @@ export const CarritoDeCompras = () => {
                               </span>
                               <Button
                                 onClick={() => removeItem(item.id)}
-                                className="bg-white text-dark"
+                                className="btn btn-success text-white"
                               >
                                 X
                               </Button>
@@ -98,7 +98,7 @@ export const CarritoDeCompras = () => {
                 height: "70vh",
               }}
             >
-              No tiene productos en su carrito :(
+            <h3 className="mx-5">No hay productos en el carrito.</h3>
             </div>
           )}
           <div

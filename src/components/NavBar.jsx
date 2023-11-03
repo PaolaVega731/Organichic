@@ -6,9 +6,15 @@ import { CarritoDeCompras } from "./CartWidget";
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+  const navbarStyle = {
+    backgroundColor:'#FCF3CF',
+    fontSize: '22px',
+    borderBottom: '0.5px solid #000'
+    
+  };
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" style={navbarStyle} >
         <Container>
           <Link to={"/"}>
             <Navbar.Brand href="#home">OrganiChic</Navbar.Brand>

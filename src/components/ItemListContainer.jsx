@@ -24,9 +24,9 @@ export const ItemListContainer = () => {
  
   return (
     <>
-      <center className="row" style={{ width: "18 rem", display: "flex",justifyContent: 'center' }}>
+      <div className="row  gap-4 w-100 p-2" style={{justifyContent: 'center', background:'#F7F9F9'}}>
         <ItemList product={product}/>
-      </center>
+      </div>
     </>
   );
 };

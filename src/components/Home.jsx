@@ -8,6 +8,7 @@ const Home = () => {
     backgroundImage: 'url("https://scontent.cdninstagram.com/v/t51.2885-15/393113868_863752148798275_5502551303501225435_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=pyI4FjAibpcAX-fXwME&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCITP2HfGQAtSUk6mcx_ePaQ8YeSQK9Q2iASy10LK7HdQ&oe=6547DE93")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    height: '100vh'
     
     
   };
@@ -29,7 +30,7 @@ const Home = () => {
     
      <div style={containerStyle }>
       <div className="container mt-10">
-        <h1 className="text-center" style={textCenterStyle}>Somos Planet Friendly</h1>
+        <h1 className="text-center" style={textCenterStyle}><strong>Somos Planet Friendly</strong></h1>
         <h2 className="mb-4 text-sm" style={textCenterStyle1}>
           Un día imaginamos el planeta que queríamos habitar... y para hacerlo
           posible, quisimos que las prendas OrganiChic fueran prendas sostenibles,

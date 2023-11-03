@@ -11,7 +11,9 @@ const Item = ({ title, image, id }) => {
         <Card.Title>{title}</Card.Title>
         <Link to={category ==undefined? 
         `product/${id}`:`/product/${id}`}>
-          <Button variant="primary">Ver detalle</Button>
+          <div className="d-flex justify-content-center">
+          <Button className="text-center" variant="primary">Ver detalle</Button>
+          </div>  
         </Link>
       </Card.Body>
     </Card>

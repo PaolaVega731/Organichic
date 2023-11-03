@@ -14,8 +14,11 @@ const ItemList = ({ product }) => {
 
   return (
     <>
-      {loading ? ( // Muestra el loader si el estado de carga es verdadero
+      {loading ? (
+        <div className="d-flex flex-column justify-content-center align-items-center " style={{height : '90vh'}}>
         <Loader />
+        </div> 
+        
       ) : (
         product.map((p) => {
           return (
