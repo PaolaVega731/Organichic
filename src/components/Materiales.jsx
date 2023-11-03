@@ -50,7 +50,7 @@ El lino es uno de los tejidos más biodegradables y elegantes de la historia de 
 
 El lino puede soportar altas temperaturas, lo que hace que la tela sea ideal para explorar la jungla o descansar en una isla tropical. También absorbe la humedad sin retener bacterias. De hecho, es más fuerte cuando está húmedo que seco y se vuelve más suave y flexible cuanto más se lava. Básicamente envejece como un buen vino.
 
-El lino es duradero, se puede fabricar de forma más sostenible que la mayoría de los otros materiales y te hace sentir como si estuvieras caminando por las costas del Mediterráneo cuando lo llevas puesto.
+El lino es duradero, se puede fabricar de forma más sostenible que la mayoría de los otros materiales.
 
 Es uno de los textiles menos dañinos para el medio ambiente , ya que sus fibras naturales se reabsorben en el entorno que los rodea en cuestión de años en lugar de siglos. Tampoco contribuyen a la actual crisis de contaminación por microplásticos en la hidrosfera, que amenaza la vida acuática y humana.</h3>
         <div className="d-flex justify-content-center">       
