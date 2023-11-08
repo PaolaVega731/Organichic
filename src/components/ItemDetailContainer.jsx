@@ -1,24 +1,16 @@
 import ItemDetail from "./ItemDetail";
-import { useState, useEffect } from "react";
-import {collection, getDocs, getFirestore} from 'firebase/firestore'
+import { useCollection } from "../hooks/useCollection";
 
 export const ItemDetailContainer = () => {
-  const [product, setProduct] = useState([]);
-
-  useEffect(() => {
-    const db = getFirestore();
-    const itemsCollection = collection(db, "Ropa");
-    getDocs(itemsCollection).then((snapshot) => {
-      const docs = snapshot.docs.map((doc) => doc.data());
-      setProduct(docs);
-    });
-  }, []);
-
+  const product = useCollection("Ropa");
   return (
     <>
-      <center>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "80vh" }}
+      >
         <ItemDetail product={product} />
-      </center>
+      </div>
     </>
   );
 };

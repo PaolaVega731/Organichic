@@ -28,21 +28,32 @@ const Cart = () => {
     0
   );
 
-  if (cart.length === 0 ) {
+  if (cart.length === 0) {
     return (
-      <div className="text-center  d-flex flex-column pt-4 align-items-center" style={{height: "100vh"}}>
+      <div
+        className="text-center  d-flex flex-column pt-4 align-items-center"
+        style={{ height: "100vh" }}
+      >
         <h3>No hay productos en el carrito.</h3>
-        <p>Puedes comprar nuestros productos <a href="/">aquí</a></p>
+        <p>
+          Puedes comprar nuestros productos <a href="/">aquí</a>
+        </p>
       </div>
     );
   }
 
   return (
     <>
-      <div class="d-flex flex-column   justify-content-center align-items-center " style={{height: '100vh', background:'#F7F9F9'}}>
+      <div
+        className="d-flex flex-column   justify-content-center align-items-center "
+        style={{ height: "100vh", background: "#F7F9F9" }}
+      >
         <h2>Carrito</h2>
         <div className="d-flex gap-2 flex-wrap">
-          <div className="d-flex bg-warned  " style={{ height: "600px", width : '1000px'}}>
+          <div
+            className="d-flex bg-warned  "
+            style={{ height: "600px", width: "1000px" }}
+          >
             <div className="w-100 h-100 flex-wrap">
               {cart.map((item) => (
                 <div

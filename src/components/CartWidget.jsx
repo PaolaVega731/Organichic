@@ -98,7 +98,7 @@ export const CarritoDeCompras = () => {
                 height: "70vh",
               }}
             >
-            <h3 className="mx-5">No hay productos en el carrito.</h3>
+              <h3 className="mx-5">No hay productos en el carrito.</h3>
             </div>
           )}
           <div
@@ -120,7 +120,7 @@ export const CarritoDeCompras = () => {
               </Link>
             ) : (
               <Link to={"/"} onClick={() => setShow(false)}>
-                <Button>Ir a Categorias</Button>
+                <Button>Ir a Comprar</Button>
               </Link>
             )}
           </div>
