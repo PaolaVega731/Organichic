@@ -21,8 +21,7 @@ function Sostenibilidad() {
     alignItems: "center",
     minHeight: windowWidth <= 600 ? "100vh" : "70vh",
     padding: windowWidth <= 600 ? "50px" : "120px",
-    backgroundImage:
-      'url("https://img.freepik.com/foto-gratis/conservacion-ambiental-jardin-ninos_1150-15276.jpg?w=740&t=st=1698946851~exp=1698947451~hmac=f25e7a2ae26fe390a121ae3e2bb383e7c6523a40b22bf613272fecd1219f571c")',
+    backgroundImage: 'url("../../public/Sostenibilidad.jpeg")',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

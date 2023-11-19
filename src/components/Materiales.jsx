@@ -18,8 +18,7 @@ const Materiales = () => {
 
   const containerStyle = {
     padding: windowWidth <= 600 ? "50px" : "60px",
-    backgroundImage:
-      'url("https://as01.epimg.net/diarioas/imagenes/2021/11/14/actualidad/1636882225_197940_1636882282_noticia_normal.jpg")',
+    backgroundImage: 'url("../../public/Materiales.jpeg")',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
