@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import imgSostenibilidad from "../../public/Sostenibilidad.jpeg";
 
 function Sostenibilidad() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -21,7 +22,7 @@ function Sostenibilidad() {
     alignItems: "center",
     minHeight: windowWidth <= 600 ? "100vh" : "70vh",
     padding: windowWidth <= 600 ? "50px" : "120px",
-    backgroundImage: 'url("../../public/Sostenibilidad.jpeg")',
+    backgroundImage: `url(${imgSostenibilidad})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

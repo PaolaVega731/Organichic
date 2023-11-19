@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import imgHome from "../../public/Home.jpeg";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -18,7 +19,7 @@ const Home = () => {
 
   const containerStyle = {
     padding: windowWidth <= 600 ? "50px" : "100px",
-    backgroundImage: 'url("../../public/Home.jpeg")',
+    backgroundImage: `url(${imgHome})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",
