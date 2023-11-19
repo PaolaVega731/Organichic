@@ -1,5 +1,5 @@
 import ItemDetail from "./ItemDetail";
-import { useCollection } from "../hooks/useCollection";
+import { useCollection } from "../Hooks/useCollection.jsx";
 
 export const ItemDetailContainer = () => {
   const product = useCollection("Ropa");
