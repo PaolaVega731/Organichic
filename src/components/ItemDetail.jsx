@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { Button, Modal } from "react-bootstrap";
@@ -11,6 +11,19 @@ const ItemDetail = () => {
   const { addItem } = useContext(CartContext);
   const [showModal, setShowModal] = useState(false);
   const { count, increment, decrement } = useButtonLogic();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const AgregarCarrito = () => {
     addItem(p, count);
@@ -33,12 +46,14 @@ const ItemDetail = () => {
   }, [id]);
 
   const p = product;
+  const containerStyle = {
+    maxWidth: windowWidth <= 600 ? "400px" : "800px",
+    maxHeight: windowWidth <= 600 ? "400px" : "600px",
+  };
+
   return (
     <>
-      <div
-        className="card mb-3"
-        style={{ maxWidth: "800px", maxHeight: "600px" }}
-      >
+      <div className="card mb-3" style={containerStyle}>
         <div className="row g-0">
           <div className="col-md-4 d-flex">
             <img src={p.image} alt="" className="img-fluid" />
