@@ -47,17 +47,17 @@ const FormCart = () => {
   };
 
   const formStyle = {
-    maxWidth: windowWidth <= 600 ? "150px" : "400px",
+    maxWidth: windowWidth <= 600 ? "150px" : "300px",
   };
   const titleStyle = {
-    fontSize: windowWidth <= 600 ? "20px" : "30px",
+    fontSize: windowWidth <= 600 ? "20px" : "25px",
   };
   const titleStyle1 = {
     fontSize: windowWidth <= 600 ? "15px" : "25px",
   };
 
   return (
-    <div className="d-flex flex-column gap-5 ">
+    <div className="d-flex flex-column gap-4 ">
       <h1 style={titleStyle}>Formulario de compra</h1>
       <form
         action=""

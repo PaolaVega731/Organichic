@@ -45,7 +45,7 @@ export const CarritoDeCompras = () => {
                     key={item.id}
                   >
                     <div className="row g-0 h-100">
-                      <div className="col-md-4 d-flex justify-content-center align-items-center">
+                      <div className="col-4 d-flex justify-content-center align-items-center">
                         <img
                           src={item.image}
                           className="img-fluid rounded-start"
@@ -53,7 +53,7 @@ export const CarritoDeCompras = () => {
                           alt={item.name}
                         />
                       </div>
-                      <div className="col-md-8">
+                      <div className="col-8">
                         <div className="row h-75 p-2">
                           <div
                             className="col d-flex flex-column justify-content-between pe-5"

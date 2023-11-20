@@ -45,14 +45,14 @@ const Cart = () => {
   return (
     <>
       <div
-        className="d-flex flex-column   justify-content-center align-items-center "
+        className="d-flex flex-column justify-content-center align-items-center "
         style={{ height: "100vh", background: "#F7F9F9" }}
       >
         <h2>Carrito</h2>
         <div className="d-flex gap-2 flex-wrap">
           <div
             className="d-flex bg-warned  "
-            style={{ height: "600px", width: "1000px" }}
+            style={{ height: "600px", width: "100%" }}
           >
             <div className="w-100 h-100 flex-wrap">
               {cart.map((item) => (
