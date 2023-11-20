@@ -7,7 +7,7 @@ const CheckoutButton = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div>
+    <div className="d-flex justify-content-center">
       {showForm ? (
         <div className="d-flex gap-4  w-100">
           <FormCart />
@@ -45,20 +45,20 @@ const Cart = () => {
   return (
     <>
       <div
-        className="d-flex flex-column justify-content-center align-items-center "
+        className="d-flex flex-column   justify-content-center align-items-center "
         style={{ height: "100vh", background: "#F7F9F9" }}
       >
         <h2>Carrito</h2>
         <div className="d-flex gap-2 flex-wrap">
           <div
-            className="d-flex bg-warned  "
-            style={{ height: "600px", width: "100%" }}
+            className="d-flex flex-column flex-md-row bg-warned  "
+            style={{ height: "600px" }}
           >
             <div className="w-100 h-100 flex-wrap">
               {cart.map((item) => (
                 <div
                   key={item.id}
-                  className="d-flex gap-4"
+                  className="d-flex gap-md-4"
                   style={{ height: "100px" }}
                 >
                   <div>
@@ -86,8 +86,8 @@ const Cart = () => {
                 </div>
               ))}
             </div>
-            <div className=" d-flex  flex-column  w-75   ">
-              <div className="w-100 d-flex align-content-center">
+            <div className=" d-flex flex-column   ">
+              <div className="w-100 d-flex justify-content-center">
                 <CheckoutButton />
               </div>
               <div>
