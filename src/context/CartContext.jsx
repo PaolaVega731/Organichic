@@ -2,9 +2,14 @@ import  { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 
+
 export const CartContext = createContext(null);
 
-export const CartProvider = ({children}) => {
+
+
+
+export const CartProvider = ({ children }) => {
+
   const [cart, setCart] = useState(() => {
     // Intenta obtener el carrito del localStorage al iniciar
     const localCart = window.localStorage.getItem('cart');
@@ -51,10 +56,11 @@ export const CartProvider = ({children}) => {
       {children}
     </CartContext.Provider>
   );
-  
-};
+
+ };
 CartProvider.propTypes = {
   children: PropTypes.node.isRequired,
+
 };
 
 export default CartProvider;

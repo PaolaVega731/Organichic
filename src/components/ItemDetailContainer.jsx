@@ -3,6 +3,7 @@ import { useCollection } from "../Hooks/useCollection.jsx";
 
 export const ItemDetailContainer = () => {
   const product = useCollection("Ropa");
+  
   return (
     <>
       <div

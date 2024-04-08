@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import imgSostenibilidad from "/Sostenibilidad.jpeg";
 
@@ -21,6 +22,7 @@ function Sostenibilidad() {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh", 
+    minHeight: windowWidth <= 600 ? "100vh" : "70vh",
     padding: windowWidth <= 600 ? "50px" : "120px",
     backgroundImage: `url(${imgSostenibilidad})`,
     backgroundSize: "cover",

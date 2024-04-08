@@ -40,8 +40,10 @@ const ItemList = ({ product }) => {
     </>
   );
 };
+
 ItemList.propTypes = {
   product: PropTypes.array.isRequired,
 };
+
 
 export default ItemList;

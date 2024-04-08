@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imgMateriales from "/Materiales.jpeg";
+
 
 const Materiales = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

@@ -1,4 +1,3 @@
-
 import { Card, Button } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';

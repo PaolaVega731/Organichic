@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import imgHome from "/Home.jpeg";
+
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

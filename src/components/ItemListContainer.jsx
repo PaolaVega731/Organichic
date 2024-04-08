@@ -1,3 +1,4 @@
+
 import  { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useCollectionFilter } from "../Hooks/useCollectionFilter";
@@ -18,7 +19,9 @@ export const ItemListContainer = () => {
   }, []);
 
   const product = useCollectionFilter("Ropa", "category");
+
   console.log(product);
+
 
   const containerStyle = {
     justifyContent: "center",
