@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
 
   const product = useCollectionFilter("Ropa", "category");
 
-  console.log(product);
+
 
 
   const containerStyle = {

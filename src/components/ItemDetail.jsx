@@ -67,23 +67,25 @@ const ItemDetail = () => {
                 <p className="h4"> $ {p.price}</p>
                 <div className="ItemDetail ">
                   <div className="d-flex gap-2">
-                    <Button
+                    <Button className="btn btn-success"
                       variant="primary"
                       onClick={increment}
                       style={{ width: "40px" }}
+                      
                     >
                       +
                     </Button>
-                    <Button
+                    <Button className="btn btn-success"
                       variant="primary"
                       onClick={decrement}
                       style={{ width: "40px" }}
+                      
                     >
                       -
                     </Button>
                   </div>
                   <p> Cantidad: {count}</p>
-                  <Button variant="primary" onClick={() => AgregarCarrito()}>
+                  <Button className="btn btn-success" variant="primary" onClick={() => AgregarCarrito()}>
                     Agregar al carrito
                   </Button>
                   <Modal show={showModal} onHide={() => setShowModal(false)}>

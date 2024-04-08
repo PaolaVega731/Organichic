@@ -14,12 +14,12 @@ export const CarritoDeCompras = () => {
 
   return (
     <div className="mx-2 relative">
-      <Button variant="primary" onClick={handleShow}>
+      <Button className="btn btn-success" variant="primary" onClick={handleShow}>
         <FaShoppingCart size={24} />
         <span className="text-black px-1">
           {cart ? (cart.length <= 9 ? cart.length : "9+") : 0}
         </span>
-      </Button>
+      </Button >
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Tu Carrito</Offcanvas.Title>
@@ -116,11 +116,11 @@ export const CarritoDeCompras = () => {
             {cart.length > 4 ? <div>y {cart.length - 4} más...</div> : ""}
             {cart.length > 0 ? (
               <Link to={"/cart"} onClick={() => setShow(false)}>
-                <Button>Ir al carrito</Button>
+                <Button className="btn btn-success">Ir al carrito</Button>
               </Link>
             ) : (
               <Link to={"/"} onClick={() => setShow(false)}>
-                <Button>Ir a Comprar</Button>
+                <Button className="btn btn-success">Ir a Comprar</Button>
               </Link>
             )}
           </div>

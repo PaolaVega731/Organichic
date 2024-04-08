@@ -10,13 +10,15 @@ export const NavBar = () => {
     backgroundColor:'#FCF3CF',
     fontSize: '22px',
     borderBottom: '0.5px solid #000'
+
     
   };
+  
   return (
     <>
       <Navbar expand="lg" style={navbarStyle} >
         <Container>
-          <Link to={"/"}>
+          <Link to={"/"}style={{ textDecoration: 'none' }}>
             <Navbar.Brand href="#home">OrganiChic</Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

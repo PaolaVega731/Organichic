@@ -10,9 +10,10 @@ export const useCollectionFilter = (collectionName, filterField) => {
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, collectionName);
+    
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-
+      
       if (category !== undefined) {
         const filterDocs = docs.filter((item) => item[filterField] === category);
 
